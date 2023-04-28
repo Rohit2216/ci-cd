@@ -31,3 +31,6 @@ function add(a, b) {
   
   console.log(add(3,4),subtract(9,3),multiply(3,4),divide(6,2))
 
+
+
+  
