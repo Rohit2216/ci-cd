@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "npx eslint index.js --fix",
-    "server":"node index.js"
+    "server": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.39.0"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
   }
 }
