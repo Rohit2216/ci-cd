@@ -9,16 +9,16 @@
 #                 - run : npx eslint .
 #                 - run : node index.js
 
-
-name: Print Node and NPM Versions
-
-on : push
-jobs :
-   print-versions:
-      runs-on: ubuntu-latest
-      steps:
-        - run: node --version
-        - run: npm --version
-        - uses: actions/checkout@v3
-        - run: npx eslint .
-        - run: node index.js
+name: Print Node Version
+on:
+  push:
+jobs:
+  print-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: Print Node Version
+        run: node -v

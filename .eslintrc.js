@@ -11,7 +11,6 @@ module.exports = {
         "ecmaVersion": "latest"
     },
     "rules": {
-        quotes:["error","double"],
-        indent: ["error", 2]    // indent means give to space 
+        quotes:["error","double"]
     }
 }
