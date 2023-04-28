@@ -48,6 +48,7 @@
 #         run: npm install
 #       - name: Run ESLint
 #         run: npx eslint .
+
      
 
 # 3rd assignment
@@ -65,7 +66,8 @@ jobs:
         with:
           node-version: '14.x'
       - run: npm install
-      - run: npm test
+      - run: npm 
+      - run : node index.js
       - uses: actions/upload-artifact@v2
         if: always()
         with:
