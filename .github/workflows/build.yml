@@ -48,7 +48,7 @@
 #         run: npm install
 #       - name: Run ESLint
 #         run: npx eslint .
-
+  
      
 
 # 3rd assignment
@@ -63,11 +63,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - run : node index.js
         with:
           node-version: '14.x'
       - run: npm install
-      - run: npm 
-      - run : node index.js
+      - run: npm test
       - uses: actions/upload-artifact@v2
         if: always()
         with:
