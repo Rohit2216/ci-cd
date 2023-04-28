@@ -63,14 +63,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run : node index.js
         with:
           node-version: '14.x'
       - run: npm install
       - run: npm test
+      - run: node index.js
       - uses: actions/upload-artifact@v2
         if: always()
         with:
           path: test-results.xml
           name: Test Results
+
 
