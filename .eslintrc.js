@@ -12,6 +12,6 @@ module.exports = {
     },
     "rules": {
         quotes:["error","double"],
-        indent: [error, 2]    // indent means give to space 
+        indent: ["error", 2]    // indent means give to space 
     }
 }
