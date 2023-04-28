@@ -1,9 +1,24 @@
+# on : push
+# jobs :
+#       first-job:
+#           runs-on : ubuntu-latest
+#           steps :
+#                 - run : node --version
+#                 - run : npm --version
+#                 - uses : actions/checkout@v3
+#                 - run : npx eslint .
+#                 - run : node index.js
+
+
+name: Print Node and NPM Versions
+
 on : push
 jobs :
-      first-job:
-          runs-on : ubuntu-latest
-          steps :
-                - run : node --version
-                - run : npm --version
-                - uses : actions/checkout@v3
-                - run : node index.js
+   print-versions:
+      runs-on: ubuntu-latest
+      steps:
+        - run: node --version
+        - run: npm --version
+        - uses: actions/checkout@v3
+        - run: npx eslint .
+        - run: node index.js
